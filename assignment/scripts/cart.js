@@ -4,22 +4,11 @@ console.log('***** Cart Functions *****');
 let basket = []
 const maxItems = 5;
 function addItem(...x) {
-
-    function isFull(...x) {
-        if (basket.length < maxItems) {
-            basket.push(...x)
-            return true;
-        }// end if
-        else {
-            return false;
-        }//end else
-    }//end isFull function
-    isFull('a', 'b', 'c'
     basket.push(...x)
     return basket;
 }//end addItem function
 
-console.log('added items to basket:', addItem('a', 'b', 'c', 'd', 'e'))
+console.log('added items to basket:', addItem('a', 'b', 'c'))
 
 
 function listItems(basket) {
@@ -30,16 +19,16 @@ function listItems(basket) {
 }//end listItems
 console.log('list these items:', listItems(basket))
 
-// function empty(basket){
-//     let i = 0;
-//     console.log('are we in this')
-//     while(i<basket.length)
-//     basket.shift(basket[i]);
-//     i++;
-//     return basket;
-// }//end empty
-// console.log('empty array with this function:', empty(basket))
-console.log(basket)
+function empty(basket){
+    let i = 0;
+    console.log('in empty function')
+    while(i<basket.length)
+    basket.shift(basket[i]);
+    i++;
+    return basket;
+}//end empty
+console.log('empty array with this function:', empty(basket))
+
 
 //Stretch Goals
 
@@ -54,8 +43,10 @@ function isFull(x) {
 
     return;
 }
-console.log('is the basket full', isFull(basket))
-console.log(basket)
+// console.log('is the basket full', isFull(basket))
+// console.log(basket)
+
+//stretch goals
 
 // Add a global const named maxItems and set it to 5.
 
